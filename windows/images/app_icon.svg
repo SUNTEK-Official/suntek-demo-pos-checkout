@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- 背景 -->
+  <rect width="64" height="64" rx="8" fill="#2196F3"/>
+  <!-- 收银机主体 -->
+  <rect x="10" y="10" width="44" height="30" rx="4" fill="#FFFFFF"/>
+  <!-- 显示屏 -->
+  <rect x="14" y="14" width="36" height="18" rx="2" fill="#4CAF50"/>
+  <!-- 显示屏内容 -->
+  <text x="32" y="25" font-family="Arial" font-size="8" fill="white" text-anchor="middle">$</text>
+  <text x="32" y="32" font-family="Arial" font-size="10" fill="white" text-anchor="middle">123.45</text>
+  <!-- 键盘 -->
+  <rect x="14" y="36" width="36" height="12" rx="2" fill="#E0E0E0"/>
+  <!-- 键盘按键 -->
+  <rect x="16" y="38" width="8" height="4" rx="1" fill="#BDBDBD"/>
+  <rect x="26" y="38" width="8" height="4" rx="1" fill="#BDBDBD"/>
+  <rect x="36" y="38" width="8" height="4" rx="1" fill="#BDBDBD"/>
+  <rect x="16" y="44" width="8" height="4" rx="1" fill="#BDBDBD"/>
+  <rect x="26" y="44" width="8" height="4" rx="1" fill="#FF5722"/>
+  <rect x="36" y="44" width="8" height="4" rx="1" fill="#BDBDBD"/>
+  <!-- 收银机抽屉 -->
+  <rect x="16" y="48" width="32" height="8" rx="2" fill="#FFC107"/>
+</svg>

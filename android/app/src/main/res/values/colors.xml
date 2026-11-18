@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#416B0F</color>
+
+    <!-- Reference palette from d.html -->
+    <color name="primary_bg">#F4F7FC</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="text_main">#1E293B</color>
+    <color name="text_muted">#64748B</color>
+    <color name="price_color">#EF4444</color>
+    <color name="border_color">#E2E8F0</color>
+    <color name="search_bg">#F1F5F9</color>
+    <color name="chip_bg">#F8FAFC</color>
+
+    <color name="btn_pay">#2F80ED</color>
+    <color name="btn_print">#27AE60</color>
+    <color name="btn_hold">#F2994A</color>
+    <color name="btn_clear">#EB5757</color>
+
+    <color name="btn_print_bg">#E8F5E9</color>
+    <color name="btn_hold_bg">#FFF3E0</color>
+    <color name="btn_clear_bg">#FFEBEE</color>
+</resources>

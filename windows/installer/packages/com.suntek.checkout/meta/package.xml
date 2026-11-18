@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package>
+    <DisplayName>SuntekCheckout 核心程序</DisplayName>
+    <Description>现代化商品收银系统</Description>
+    <Version>1.0.0-1</Version>
+    <ReleaseDate>2025-12-01</ReleaseDate>
+    <Default>true</Default>
+    <ForcedInstallation>true</ForcedInstallation>
+    <Essential>true</Essential>
+</Package>

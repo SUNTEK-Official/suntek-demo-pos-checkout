@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#f5f5f5">
+
+    <!-- Product list section (left side) -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/product_scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/order_summary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:fillViewport="true">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_products"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_product" />
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Order summary section (right side) -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/order_summary"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#ffffff"
+        android:padding="16dp"
+        app:layout_constraintStart_toEndOf="@+id/product_scroll_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:elevation="4dp"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/tv_order_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order Summary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="16dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_order_items"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#f5f5f5"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_order_title"
+            app:layout_constraintBottom_toTopOf="@+id/tv_subtotal_label"
+            app:layout_constraintHeight_percent="0.4"
+            tools:listitem="@layout/item_order" />
+
+        <TextView
+            android:id="@+id/tv_subtotal_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="subtotal:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_order_items"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/tv_subtotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0.00"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_order_items"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/tv_tax_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="taxes and fees:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_subtotal_label"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tv_tax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0.00"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_subtotal"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tv_total_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="total:"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tax_label"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0.00"
+            android:textSize="24sp"
+            android:textColor="#008000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tax"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btn_cash_payment"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="cash payment"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:backgroundTint="#ff9800"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_total_label"
+            app:layout_constraintBottom_toTopOf="@+id/btn_card_payment" />
+
+        <Button
+            android:id="@+id/btn_card_payment"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="swipe card payment"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:backgroundTint="#2196f3"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_cash_payment"
+            app:layout_constraintBottom_toTopOf="@+id/btn_clear_order" />
+
+        <Button
+            android:id="@+id/btn_clear_order"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Clear order"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:backgroundTint="#f44336"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_card_payment"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

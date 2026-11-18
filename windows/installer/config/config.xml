@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Installer>
+    <Name>SuntekCheckout</Name>
+    <Version>1.0.0</Version>
+    <Title>Suntek Checkout - 收银系统</Title>
+    <Publisher>Suntek</Publisher>
+    <StartMenuDir>Suntek</StartMenuDir>
+    <TargetDir>@ApplicationsDir@/SuntekCheckout</TargetDir>
+    <WizardStyle>Modern</WizardStyle>
+<WizardDefaultWidth>800</WizardDefaultWidth>
+<WizardDefaultHeight>600</WizardDefaultHeight>
+<Logo>suntek_logo.png</Logo>   <!-- 放在 config/ 目录下 -->
+   
+    <AllowSpaceInPath>true</AllowSpaceInPath>
+</Installer>
